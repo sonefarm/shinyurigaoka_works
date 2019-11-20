@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>新百合ヶ丘ワークス</title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css?20191111">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,900&display=swap">
+    <link rel="stylesheet" type="text/css" href="../css/style.css?20191112">
+    <link rel="stylesheet" type="text/css" href="../css/vegas.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/modaal.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/1b9b79243d.js" crossorigin="anonymous"></script>
+    <script src="../js/jquery.matchHeight.js" type="text/javascript"></script>
+    <script src="../js/stickyfill.min.js" type="text/javascript"></script>
+    <script src="../js/vegas.min.js" type="text/javascript"></script>
+    <script src="../js/modaal.min.js" type="text/javascript"></script>
+    
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#lang ul').hide();
+            $(function(){
+                $('#lang ul').click(function(){
+                    var text = $('[name="lng"]:checked').val();
+                    $('#langnow span').html(text);
+                    $(this).hide();
+                });
+            });
+            $(function(){
+                $('#langnow').click(function(){
+                    $('#lang ul').show();
+                });
+            });
+            $(function() {
+                function img_rect() {
+                    var wt = $(".cat_search_box li").css("width");
+                    $(".cat_search_box li").css('height', wt);
+                };
+                $(window).resize(function() {
+                    img_rect();
+                });
+                img_rect();
+            });
+
+            //高さ調節
+            $(function() {
+                $('.entry_store_box').matchHeight();
+            });
+
+            $(function() {
+                $(window).on("scroll", function() {
+                    if ($(this).scrollTop() > 100) {
+                        $(".foot_pagetop_btn").fadeIn("fast");
+                    } else {
+                        $(".foot_pagetop_btn").fadeOut("fast");
+                    }
+
+                    scrollHeight = $(document).height();
+                    scrollPosition = $(window).height() + $(window).scrollTop();
+                    footHeight = $("footer").innerHeight();
+
+                    if ( scrollHeight - scrollPosition  <= footHeight ) {
+                        $(".foot_pagetop_btn").css({
+                            "position":"absolute",
+                        });
+                    } else {
+                        $(".foot_pagetop_btn").css({
+                            "position":"fixed",
+                        });
+                    }
+                });
+            });
+
+            $('a[href^="#"]').click(function() {
+                var speed = 400;
+                var href= $(this).attr("href");
+                var $target = $(href == "#" || href == "" ? 'html' : href);
+                var position = $target.offset().top;
+                $('body,html').animate({scrollTop:position}, speed, 'swing');
+                return false;
+            });
+
+            $(window).scroll(function() {
+                //idがkeyvisualの要素を取得
+                let elem = document.getElementById('archive_head');
+                //現在のスクロール位置を取得して、10で除算
+                let scrollY = window.scrollY/5;
+                //上で取得した値と画像幅を加算して、elemの背景サイズに設定
+                elem.style.backgroundSize = 100 + scrollY + '%';
+            });
+
+            //ヘッダースクロールクラス追加
+            $(window).scroll(function() {
+                var scrrolltop = $(this).scrollTop();
+                var ww = $(window).width();
+                var topob = $("header");
+                if(scrrolltop > 1 && ww > 767){
+                    topob.addClass("scrolls");
+                }else if(scrrolltop > 1 && ww < 767){
+                    topob.addClass("scrolls");
+                }else{
+                    topob.removeClass("scrolls");
+                }
+            });
+
+
+            $('.menu_global').modaal();
+
+
+        });
+    </script>
+
+
+</head>
+<body class="jp" id="archive">
+    <div id="menu_global" style="display:none;">
+        <h2><a href="#">新百合ヶ丘ワークス <i class="fas fa-angle-double-right"></i></a></h2>
+        <ul class="lang">
+            <li><a href="#">Japanese</a></li>
+            <li><a href="#">English</a></li>
+        </ul>
+        <h3><a href="#">街の情報 <i class="fas fa-angle-double-right"></i></a></h3>
+        <p class="txt01">FreeWi-fiがあるお店やランチ情報など、ビジネスマンにちょっと便利な情報をお届けします。</p>
+        <div class="searchlist">
+            <div class="searchlist_cat">
+                <h4>カテゴリー</h4>
+                <ul class="catlist">
+                    <li><a href="#">Free Wi-fi <i class="fas fa-angle-double-right"></i></a></li>
+                    <li><a href="#">ランチ <i class="fas fa-angle-double-right"></i></a></li>
+                    <li><a href="#">会食 <i class="fas fa-angle-double-right"></i></a></li>
+                    <li><a href="#">飲み会 <i class="fas fa-angle-double-right"></i></a></li>
+                    <li><a href="#">官庁 <i class="fas fa-angle-double-right"></i></a></li>
+                    <li><a href="#">病院 <i class="fas fa-angle-double-right"></i></a></li>
+                    <li><a href="#">花 <i class="fas fa-angle-double-right"></i></a></li>
+                    <li><a href="#">お土産 <i class="fas fa-angle-double-right"></i></a></li>
+                </ul>
+            </div>
+            <div class="searchlist_area">
+                <h4>エリア</h4>
+                <ul class="catlist">
+                    <li><a href="#">北口 <i class="fas fa-angle-double-right"></i></a></li>
+                    <li><a href="#">エキナカ <i class="fas fa-angle-double-right"></i></a></li>
+                    <li><a href="#">南口 <i class="fas fa-angle-double-right"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <h3><a href="#">ワークスニュース <i class="fas fa-angle-double-right"></i></a></h3>
+        <p class="txt01">税務署への道順や、空港バスの情報などを意外と知らない情報を詳しくご紹介いたします。</p>
+        <h3><a href="#">運営者情報 <i class="fas fa-angle-double-right"></i></a></h3>
+        <p class="txt01">新百合ヶ丘ワークスを運営者の情報とお問合せフォーム。</p>
+    </div>
+
+    <header>
+        <div id="header_inner">
+            <div id="lang">
+                <div id="langnow" class="rmp1c"><span>JP</span><i class="fas fa-angle-down"></i></div>
+                <ul>
+                    <li><input type="radio" value="JP" name="lng" checked="checked"><label class="rmp1c">JP</label></li>
+                    <li><input type="radio" value="EN" name="lng"><label class="rmp1c">EN</label></li>
+                </ul>
+            </div>
+            <div id="logo"><h1 class="rmp1c"><strong>新百合ヶ丘ワークス</strong></h1><span class="rmp1c">Shinyurigaoka-Works</span></div>
+            <div id="menubar"><a href="#menu_global" class="menu_global" style="border:0px;"><i class="fas fa-bars"></i></a></div>
+        </div>
+    </header>
+    <main role="main">
+        <article id="cat_archive">
+            <section id="archive_head">
+                <div class="archive_head_inner">
+                    <p><i class="fas fa-wifi"></i></p>
+                    <h2>Free Wi-fi カテゴリ</h2>
+                </div>
+            </section>
+            <section class="archive_navi">
+                <div class="navi_box clearfix">
+                    <div class="navi_box_back">
+                        <p class="btn_xs light"><a href="#">&laquo; 戻る</a></p>
+                    </div>
+                </div>
+            </section>
+            <section id="archive_body">
+                <div class="wrap">
+                    <div class="entry_store_box">
+                        <p class="entry_store_icon"><span><i class="fas fa-wifi"></i></span></p>
+                        <a href="#" class="entry_store_img">
+                            <p><img src="../images/store/001.jpg" alt="タリーズ"></p>
+                        </a>
+                        <div class="entry_store_info">
+                            <h3>タリーズコーヒー 小田急マルシェ 新百合ヶ丘店</h3>
+                            <dl>
+                                <dt><span>営業時間</span></dt>
+                                <dd>平日：7:00～22:00／土：7:00～22:00／日祝：7:00～22:00</dd>
+                            </dl>
+                            <ul class="tagbox">
+                                <li><a href="#">#南口</a></li>
+                                <li><a href="#">#Free Wi-fi</a></li>
+                                <li><a href="#">#カフェ</a></li>
+                                <li><a href="#">#ランチ</a></li>
+                                <li><a href="#">#軽食</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="entry_store_box">
+                        <p class="entry_store_icon"><span><i class="fas fa-beer"></i></span></p>
+                        <a href="#" class="entry_store_img">
+                            <p><img src="../images/store/001.jpg" alt="肉汁餃子製作所ダンダダン酒場 新百合ヶ丘店"></p>
+                        </a>
+                        <div class="entry_store_info">
+                            <h3>肉汁餃子製作所ダンダダン酒場 新百合ヶ丘店</h3>
+                            <dl>
+                                <dt><span>営業時間</span></dt>
+                                <dd>平日：7:00～22:00／土：7:00～22:00／日祝：7:00～22:00</dd>
+                            </dl>
+                            <ul class="tagbox">
+                                <li><a href="#">#南口</a></li>
+                                <li><a href="#">#マプレ</a></li>
+                                <li><a href="#">#ランチ</a></li>
+                                <li><a href="#">#飲み会</a></li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class="entry_store_box">
+                        <p class="entry_store_icon"><span><i class="fas fa-wifi"></i></span></p>
+                        <a href="#" class="entry_store_img">
+                            <p><img src="../images/store/001.jpg" alt="タリーズ"></p>
+                        </a>
+                        <div class="entry_store_info">
+                            <h3>タリーズコーヒー 小田急マルシェ 新百合ヶ丘店</h3>
+                            <dl>
+                                <dt><span>営業時間</span></dt>
+                                <dd>平日：7:00～22:00／土：7:00～22:00／日祝：7:00～22:00</dd>
+                            </dl>
+                            <ul class="tagbox">
+                                <li><a href="#">#南口</a></li>
+                                <li><a href="#">#Free Wi-fi</a></li>
+                                <li><a href="#">#カフェ</a></li>
+                                <li><a href="#">#ランチ</a></li>
+                                <li><a href="#">#軽食</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="entry_store_box">
+                        <p class="entry_store_icon"><span><i class="fas fa-beer"></i></span></p>
+                        <a href="#" class="entry_store_img">
+                            <p><img src="../images/store/001.jpg" alt="肉汁餃子製作所ダンダダン酒場 新百合ヶ丘店"></p>
+                        </a>
+                        <div class="entry_store_info">
+                            <h3>肉汁餃子製作所ダンダダン酒場 新百合ヶ丘店</h3>
+                            <dl>
+                                <dt><span>営業時間</span></dt>
+                                <dd>平日：7:00～22:00／土：7:00～22:00／日祝：7:00～22:00</dd>
+                            </dl>
+                            <ul class="tagbox">
+                                <li><a href="#">#南口</a></li>
+                                <li><a href="#">#マプレ</a></li>
+                                <li><a href="#">#ランチ</a></li>
+                                <li><a href="#">#飲み会</a></li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class="entry_store_box">
+                        <p class="entry_store_icon"><span><i class="fas fa-wifi"></i></span></p>
+                        <a href="#" class="entry_store_img">
+                            <p><img src="../images/store/001.jpg" alt="タリーズ"></p>
+                        </a>
+                        <div class="entry_store_info">
+                            <h3>タリーズコーヒー 小田急マルシェ 新百合ヶ丘店</h3>
+                            <dl>
+                                <dt><span>営業時間</span></dt>
+                                <dd>平日：7:00～22:00／土：7:00～22:00／日祝：7:00～22:00</dd>
+                            </dl>
+                            <ul class="tagbox">
+                                <li><a href="#">#南口</a></li>
+                                <li><a href="#">#Free Wi-fi</a></li>
+                                <li><a href="#">#カフェ</a></li>
+                                <li><a href="#">#ランチ</a></li>
+                                <li><a href="#">#軽食</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="entry_store_box">
+                        <p class="entry_store_icon"><span><i class="fas fa-beer"></i></span></p>
+                        <a href="#" class="entry_store_img">
+                            <p><img src="../images/store/001.jpg" alt="肉汁餃子製作所ダンダダン酒場 新百合ヶ丘店"></p>
+                        </a>
+                        <div class="entry_store_info">
+                            <h3>肉汁餃子製作所ダンダダン酒場 新百合ヶ丘店</h3>
+                            <dl>
+                                <dt><span>営業時間</span></dt>
+                                <dd>平日：7:00～22:00／土：7:00～22:00／日祝：7:00～22:00</dd>
+                            </dl>
+                            <ul class="tagbox">
+                                <li><a href="#">#南口</a></li>
+                                <li><a href="#">#マプレ</a></li>
+                                <li><a href="#">#ランチ</a></li>
+                                <li><a href="#">#飲み会</a></li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class="entry_store_box">
+                        <p class="entry_store_icon"><span><i class="fas fa-wifi"></i></span></p>
+                        <a href="#" class="entry_store_img">
+                            <p><img src="../images/store/001.jpg" alt="タリーズ"></p>
+                        </a>
+                        <div class="entry_store_info">
+                            <h3>タリーズコーヒー 小田急マルシェ 新百合ヶ丘店</h3>
+                            <dl>
+                                <dt><span>営業時間</span></dt>
+                                <dd>平日：7:00～22:00／土：7:00～22:00／日祝：7:00～22:00</dd>
+                            </dl>
+                            <ul class="tagbox">
+                                <li><a href="#">#南口</a></li>
+                                <li><a href="#">#Free Wi-fi</a></li>
+                                <li><a href="#">#カフェ</a></li>
+                                <li><a href="#">#ランチ</a></li>
+                                <li><a href="#">#軽食</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="entry_store_box">
+                        <p class="entry_store_icon"><span><i class="fas fa-beer"></i></span></p>
+                        <a href="#" class="entry_store_img">
+                            <p><img src="../images/store/001.jpg" alt="肉汁餃子製作所ダンダダン酒場 新百合ヶ丘店"></p>
+                        </a>
+                        <div class="entry_store_info">
+                            <h3>肉汁餃子製作所ダンダダン酒場 新百合ヶ丘店</h3>
+                            <dl>
+                                <dt><span>営業時間</span></dt>
+                                <dd>平日：7:00～22:00／土：7:00～22:00／日祝：7:00～22:00</dd>
+                            </dl>
+                            <ul class="tagbox">
+                                <li><a href="#">#南口</a></li>
+                                <li><a href="#">#マプレ</a></li>
+                                <li><a href="#">#ランチ</a></li>
+                                <li><a href="#">#飲み会</a></li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class="entry_store_box">
+                        <p class="entry_store_icon"><span><i class="fas fa-wifi"></i></span></p>
+                        <a href="#" class="entry_store_img">
+                            <p><img src="../images/store/001.jpg" alt="タリーズ"></p>
+                        </a>
+                        <div class="entry_store_info">
+                            <h3>タリーズコーヒー 小田急マルシェ 新百合ヶ丘店</h3>
+                            <dl>
+                                <dt><span>営業時間</span></dt>
+                                <dd>平日：7:00～22:00／土：7:00～22:00／日祝：7:00～22:00</dd>
+                            </dl>
+                            <ul class="tagbox">
+                                <li><a href="#">#南口</a></li>
+                                <li><a href="#">#Free Wi-fi</a></li>
+                                <li><a href="#">#カフェ</a></li>
+                                <li><a href="#">#ランチ</a></li>
+                                <li><a href="#">#軽食</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="entry_store_box">
+                        <p class="entry_store_icon"><span><i class="fas fa-beer"></i></span></p>
+                        <a href="#" class="entry_store_img">
+                            <p><img src="../images/store/001.jpg" alt="肉汁餃子製作所ダンダダン酒場 新百合ヶ丘店"></p>
+                        </a>
+                        <div class="entry_store_info">
+                            <h3>肉汁餃子製作所ダンダダン酒場 新百合ヶ丘店</h3>
+                            <dl>
+                                <dt><span>営業時間</span></dt>
+                                <dd>平日：7:00～22:00／土：7:00～22:00／日祝：7:00～22:00</dd>
+                            </dl>
+                            <ul class="tagbox">
+                                <li><a href="#">#南口</a></li>
+                                <li><a href="#">#マプレ</a></li>
+                                <li><a href="#">#ランチ</a></li>
+                                <li><a href="#">#飲み会</a></li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="pagination">
+                    <ul>
+                        <li><a href="#">&laquo;</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><span>2</span></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">&raquo;</a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="cat_search_box">
+                <div class="wrap clearfix">
+                    <div class="sec_head_ttl">
+                        <p class="sht_icon"><i class="far fa-question-circle"></i></p>
+                        <h2>何をお探しですか？</h2>
+                    </div>
+                    <ul>
+                        <li><p><span><i class="fas fa-wifi"></i><em>Free Wi-fi</em></span></p></li>
+                        <li><p><span><i class="fas fa-utensils"></i><em>ランチ</em></span></p></li>
+                        <li><p><span><i class="fas fa-glass-cheers"></i><em>会食</em></span></p></li>
+                        <li><p><span><i class="fas fa-beer"></i><em>飲み会</em></span></p></li>
+                        <li><p><span><i class="fas fa-landmark"></i><em>官庁</em></span></p></li>
+                        <li><p><span><i class="fas fa-hospital-alt"></i><em>病院</em></span></p></li>
+                        <li><p><span><i class="fas fa-atom"></i><em>花</em></span></p></li>
+                        <li><p><span><i class="fas fa-gift"></i><em>お土産</em></span></p></li>
+                    </ul>
+                </div>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <div id="foot_meta_area" class="clearfix ">
+            <div class="foot_pagettl"><p><strong><i class="fas fa-home"></i> <a href="/">新百合ヶ丘ワークス</a> &rsaquo; </strong></p></div>
+            <div class="foot_sns_pc">
+                <ul>
+                    <li class="fb"><a href="#"><i class="fab fa-facebook-f"></i><p>facebook</p></a></li>
+                    <li class="insta"><a href="#"><i class="fab fa-instagram"></i><p>instagram</p></a></li>
+                    <li class="tw"><a href="#"><i class="fab fa-twitter"></i><p>twitter</p></a></li>
+                    <li class="contact"><a href="#"><i class="far fa-envelope"></i><p>Contact</p></a></li>
+                </ul>
+            </div>
+            <div class="foot_pagetop_btn"><a href="#"><i class="fas fa-chevron-up"></i></a></div>
+        </div>
+        <ul id="foot_sns_sp">
+            <li class="fb"><a href="#"><i class="fab fa-facebook-f"></i><p>facebook</p></a></li>
+            <li class="insta"><a href="#"><i class="fab fa-instagram"></i><p>instagram</p></a></li>
+            <li class="tw"><a href="#"><i class="fab fa-twitter"></i><p>twitter</p></a></li>
+            <li class="contact"><a href="#"><i class="far fa-envelope"></i><p>Contact</p></a></li>
+        </ul>
+        <address>Copyright &copy Shinyurigaoka-Works All Rights Reserved.</address>
+    </footer>
+</body>
+</html>
