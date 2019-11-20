@@ -1093,14 +1093,17 @@ footer{
                     letter-spacing: 1px;
                 }
                 i{
-                    font-size: 2.0rem;
+                    display: inline;
+                    font-size: 1.8rem;
                     color: $maincolor;
+                    margin: 0 3px 0 0;
                 }
                 a{
                     color: $maincolor;
                 }
             }
             .foot_sns_pc{
+                display: block;
                 height: 78px;
                 padding: 0 80px 0 80px;
                 border-top: 1px solid #CCC;
@@ -1132,11 +1135,15 @@ footer{
                             box-sizing: border-box;
                             padding:7px 0 0 0;
                             line-height: 1.0;
+                            &:hover{
+                                opacity: 0.8;
+                            }
                             p{
                                 font-size: 1.0rem;
                                 padding:3px 0 0 0;
                                 letter-spacing: 1px;
                             }
+                            
                         }
                         
                         &.fb{

@@ -1128,13 +1128,16 @@ footer address {
     letter-spacing: 1px;
   }
   footer #foot_meta_area .foot_pagettl i {
-    font-size: 2.0rem;
+    display: inline;
+    font-size: 1.8rem;
     color: #1f79a9;
+    margin: 0 3px 0 0;
   }
   footer #foot_meta_area .foot_pagettl a {
     color: #1f79a9;
   }
   footer #foot_meta_area .foot_sns_pc {
+    display: block;
     height: 78px;
     padding: 0 80px 0 80px;
     border-top: 1px solid #CCC;
@@ -1170,6 +1173,9 @@ footer address {
             box-sizing: border-box;
     padding: 7px 0 0 0;
     line-height: 1.0;
+  }
+  footer #foot_meta_area .foot_sns_pc ul li a:hover {
+    opacity: 0.8;
   }
   footer #foot_meta_area .foot_sns_pc ul li a p {
     font-size: 1.0rem;
