@@ -201,11 +201,18 @@ footer #foot_meta_area {
 
 footer #foot_meta_area .foot_pagettl {
   height: 43px;
-  padding: 0 45px 0 3%;
+  padding: 0 0 0 3%;
+  margin: 0 45px 0 0;
   border-top: 1px solid #CCC;
   border-bottom: 1px solid #CCC;
   line-height: 43px;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  overflow: auto;
+  white-space: nowrap;
 }
 
 footer #foot_meta_area .foot_pagettl strong {
@@ -413,6 +420,41 @@ footer address {
   position: absolute;
   top: 50%;
   right: 5%;
+  margin-top: -4px;
+}
+
+.btn_back {
+  display: block;
+  text-align: center;
+}
+
+.btn_back a {
+  display: inline-block;
+  text-align: center;
+  min-width: 80%;
+  max-width: 100%;
+  background: #FFF;
+  border: 1px solid #1f79a9;
+  color: #1f79a9;
+  padding: 8px 10px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  position: relative;
+  font-size: 1.4rem;
+}
+
+.btn_back a::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border: 0px;
+  border-top: solid 2px #1f79a9;
+  border-right: solid 2px #1f79a9;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(225deg);
+  position: absolute;
+  top: 50%;
+  left: 5%;
   margin-top: -4px;
 }
 
@@ -1032,6 +1074,114 @@ footer address {
   color: #1f79a9;
 }
 
+#store_detail {
+  padding: 60px 0 0 0;
+}
+
+#store_detail #store_detail_head {
+  height: 200px;
+  display: table;
+}
+
+#store_detail #store_detail_head h2 {
+  display: table-cell;
+  vertical-align: bottom;
+}
+
+#store_detail #store_detail_head h2 strong {
+  display: block;
+  background: #FFF;
+  text-align: left;
+  color: #000;
+  font-size: 1.6rem;
+  line-height: 1.3;
+  letter-spacing: 2px;
+  width: 92%;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px 5px 0 0;
+  padding: 8px 3%;
+}
+
+#store_detail .store_detail_tag {
+  padding: 10px 5% 10px;
+}
+
+#store_detail .store_detail_tag ul {
+  display: block;
+  letter-spacing: -0.4em;
+}
+
+#store_detail .store_detail_tag ul li {
+  display: inline-block;
+  letter-spacing: normal;
+  margin: 0 10px 5px 0;
+}
+
+#store_detail .store_detail_tag ul li a {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: #1f79a9;
+  font-weight: bold;
+}
+
+#store_detail #store_detail_body {
+  padding: 15px 4% 10px;
+  background: #f2f1ec;
+}
+
+#store_detail #store_detail_body dl {
+  display: block;
+  margin: 0 0 10px 0;
+  padding: 0 0 10px 0;
+  border-bottom: 1px dotted #1f79a9;
+}
+
+#store_detail #store_detail_body dl dt {
+  display: inline-block;
+  background: #000;
+  color: #FFF;
+  font-size: 1.4rem;
+  line-height: 1.1;
+  padding: 3px 8px 4px;
+  letter-spacing: 2px;
+  margin: 0 0 5px 0;
+}
+
+#store_detail #store_detail_body dl dd {
+  display: block;
+  color: #000;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  padding: 0 0 0;
+  letter-spacing: 2px;
+}
+
+#store_detail #store_detail_body dl dd ul {
+  list-style: none;
+}
+
+#store_detail #store_detail_body dl dd ul li {
+  margin: 0 0 3px 0;
+}
+
+#store_detail #store_detail_body dl:nth-last-of-type(1) {
+  border: 0px;
+  margin: 0 0 0 0;
+}
+
+#store_detail #store_detail_map {
+  padding: 15px 4% 20px;
+  background: #FFF;
+}
+
+#store_detail #store_detail_map iframe {
+  width: 100%;
+  height: 250px;
+  margin: 0 0 20px 0;
+}
+
 @media screen and (min-width: 1001px) {
   header {
     width: 100%;
@@ -1457,14 +1607,14 @@ footer address {
     position: relative;
     border-right: 5px solid #1f79a9;
     border-bottom: 5px solid #1f79a9;
-    margin: 0 0 15px 0;
+    margin: 0 0 20px 0;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    width: 32%;
+    width: 49%;
     float: left;
   }
-  .entry_store_box:nth-of-type(3n+2) {
-    margin: 0 1.25% 15px 1.25%;
+  .entry_store_box:nth-of-type(odd) {
+    margin: 0 2% 15px 0;
   }
   .entry_store_box .entry_store_icon {
     display: table;
@@ -1657,15 +1807,14 @@ footer address {
     margin: 0 0 8px 0;
     font-size: 1.8rem;
   }
-  #index .area_search_box ul li:nth-of-type(1) {
-    border-right: 2px solid #f2f1ec;
+  #index .area_search_box ul li.area01 {
+    background-size: 100% auto;
   }
-  #index .area_search_box ul li:nth-of-type(2) {
-    border-right: 2px solid #f2f1ec;
-    width: 34%;
+  #index .area_search_box ul li.area02 {
+    background-size: 100% auto;
   }
-  #index .area_search_box ul li:nth-of-type(3) {
-    border-right: 0px !important;
+  #index .area_search_box ul li.area03 {
+    background-size: 100% auto;
   }
   #index .entry_access_box {
     background: #f2f1ec;
