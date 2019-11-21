@@ -1345,6 +1345,12 @@ footer{
         background: $maincolor;
         padding: 0 0 5px 0;
         margin: 0 0 0 0;
+        &.contentsfoot{
+            padding: 5px 0 5px 0;
+            ul{
+                border-radius: 10px;
+            }
+        }
         .sec_head_ttl{
             display: block;
             height: 100px;
@@ -1570,6 +1576,30 @@ footer{
             font-size: 2.0rem;
         }
     }
+    // --ページ送り
+    .pagination{
+        padding:30px 0 0 0;
+        margin: 0 0 30px 0;
+        ul{
+            li{
+                margin: 0 4px 3px;
+                a{
+                    width: 45px;
+                    height: 45px;
+                    line-height: 45px;
+                    background: $maincolor;
+                    font-size: 1.6rem;
+                }
+                span{
+                    width: 45px;
+                    height: 45px;
+                    line-height: 45px;
+                    color: #000;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
 
     // ◆ トップ用
     #index{
@@ -1707,6 +1737,56 @@ footer{
 
 
     }
+
+    // ◆ アーカイブ用
+    #archive{
+        .archive_navi{
+            padding:12px 0 12px;
+            width: 1000px;
+            margin: 0 auto;
+            .navi_box{
+                .navi_box_back{
+                    float: left;
+                    width: 50%;
+                }
+            }
+        }
+    }
+    // --エリア用
+    #area_archive{
+        padding: 80px 0 0 0;
+        #archive_head{
+            h2{
+                line-height: 150px;
+                font-size:3.6rem;
+            }
+        }    
+    }
+    // --カテゴリー用
+    #cat_archive{
+        padding: 80px 0 0;
+        #archive_head{
+            text-align: center;
+            padding:20px 4% 20px;
+            border-bottom:1px solid $maincolor;
+            background: $bgcolor01;
+            .archive_head_inner{
+                height: 100%;
+                p{
+                    font-size:3.0rem;
+                    color: $subcolor;
+                    padding: 0 10px 0 0;
+                }
+                h2{
+                    letter-spacing: 2px;
+                    font-size: 2.6rem;
+                    color: $subcolor;
+                }
+            }
+        }    
+    }
+
+
 
 }
 @include md-screen($screen-sm02, $screen-lg) {
@@ -2230,6 +2310,31 @@ footer{
             color: #FFF;
         }
     }
+    // --ページ送り
+    .pagination{
+        padding:30px 0 0 0;
+        margin: 0 0 30px 0;
+        ul{
+            li{
+                margin: 0 4px 3px;
+                a{
+                    width: 45px;
+                    height: 45px;
+                    line-height: 45px;
+                    background: $maincolor;
+                    font-size: 1.6rem;
+                }
+                span{
+                    width: 45px;
+                    height: 45px;
+                    line-height: 45px;
+                    color: #000;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+
 
     // ◆ トップ用
     #index{
@@ -2352,6 +2457,55 @@ footer{
             }
         }
 
+    }
+
+    // ◆ アーカイブ用
+    #archive{
+        .archive_navi{
+            padding:12px 3% 8px;
+            width: 100%;
+            margin: 0 auto;
+            box-sizing: border-box;
+            .navi_box{
+                .navi_box_back{
+                    float: left;
+                    width: 50%;
+                }
+            }
+        }
+    }
+    // --エリア用
+    #area_archive{
+        padding: 80px 0 0 0;
+        #archive_head{
+            h2{
+                line-height: 150px;
+                font-size:3.6rem;
+            }
+        }    
+    }
+    // --カテゴリー用
+    #cat_archive{
+        padding: 80px 0 0;
+        #archive_head{
+            text-align: center;
+            padding:20px 4% 20px;
+            border-bottom:1px solid $maincolor;
+            background: $bgcolor01;
+            .archive_head_inner{
+                height: 100%;
+                p{
+                    font-size:3.0rem;
+                    color: $subcolor;
+                    padding: 0 10px 0 0;
+                }
+                h2{
+                    letter-spacing: 2px;
+                    font-size: 2.6rem;
+                    color: $subcolor;
+                }
+            }
+        }    
     }
 
 

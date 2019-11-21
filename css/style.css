@@ -1364,6 +1364,12 @@ footer address {
     padding: 0 0 5px 0;
     margin: 0 0 0 0;
   }
+  .cat_search_box.contentsfoot {
+    padding: 5px 0 5px 0;
+  }
+  .cat_search_box.contentsfoot ul {
+    border-radius: 10px;
+  }
   .cat_search_box .sec_head_ttl {
     display: block;
     height: 100px;
@@ -1585,6 +1591,27 @@ footer address {
     color: #FFF;
     font-size: 2.0rem;
   }
+  .pagination {
+    padding: 30px 0 0 0;
+    margin: 0 0 30px 0;
+  }
+  .pagination ul li {
+    margin: 0 4px 3px;
+  }
+  .pagination ul li a {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    background: #1f79a9;
+    font-size: 1.6rem;
+  }
+  .pagination ul li span {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #000;
+    font-size: 1.6rem;
+  }
   #index #mainimage {
     display: block;
     height: 300px;
@@ -1703,6 +1730,44 @@ footer address {
   #index .news_area .news_body .news_box .entrymovie {
     width: 75%;
     margin: 0 auto 20px;
+  }
+  #archive .archive_navi {
+    padding: 12px 0 12px;
+    width: 1000px;
+    margin: 0 auto;
+  }
+  #archive .archive_navi .navi_box .navi_box_back {
+    float: left;
+    width: 50%;
+  }
+  #area_archive {
+    padding: 80px 0 0 0;
+  }
+  #area_archive #archive_head h2 {
+    line-height: 150px;
+    font-size: 3.6rem;
+  }
+  #cat_archive {
+    padding: 80px 0 0;
+  }
+  #cat_archive #archive_head {
+    text-align: center;
+    padding: 20px 4% 20px;
+    border-bottom: 1px solid #1f79a9;
+    background: #f2f1ec;
+  }
+  #cat_archive #archive_head .archive_head_inner {
+    height: 100%;
+  }
+  #cat_archive #archive_head .archive_head_inner p {
+    font-size: 3.0rem;
+    color: #1f79a9;
+    padding: 0 10px 0 0;
+  }
+  #cat_archive #archive_head .archive_head_inner h2 {
+    letter-spacing: 2px;
+    font-size: 2.6rem;
+    color: #1f79a9;
   }
 }
 
@@ -2194,6 +2259,27 @@ footer address {
     border-radius: 0 5px 5px 0;
     color: #FFF;
   }
+  .pagination {
+    padding: 30px 0 0 0;
+    margin: 0 0 30px 0;
+  }
+  .pagination ul li {
+    margin: 0 4px 3px;
+  }
+  .pagination ul li a {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    background: #1f79a9;
+    font-size: 1.6rem;
+  }
+  .pagination ul li span {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #000;
+    font-size: 1.6rem;
+  }
   #index #mainimage {
     height: 350px;
   }
@@ -2301,6 +2387,46 @@ footer address {
   #index .news_area .news_body .news_box .entrymovie {
     width: 75%;
     margin: 0 auto 20px;
+  }
+  #archive .archive_navi {
+    padding: 12px 3% 8px;
+    width: 100%;
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  #archive .archive_navi .navi_box .navi_box_back {
+    float: left;
+    width: 50%;
+  }
+  #area_archive {
+    padding: 80px 0 0 0;
+  }
+  #area_archive #archive_head h2 {
+    line-height: 150px;
+    font-size: 3.6rem;
+  }
+  #cat_archive {
+    padding: 80px 0 0;
+  }
+  #cat_archive #archive_head {
+    text-align: center;
+    padding: 20px 4% 20px;
+    border-bottom: 1px solid #1f79a9;
+    background: #f2f1ec;
+  }
+  #cat_archive #archive_head .archive_head_inner {
+    height: 100%;
+  }
+  #cat_archive #archive_head .archive_head_inner p {
+    font-size: 3.0rem;
+    color: #1f79a9;
+    padding: 0 10px 0 0;
+  }
+  #cat_archive #archive_head .archive_head_inner h2 {
+    letter-spacing: 2px;
+    font-size: 2.6rem;
+    color: #1f79a9;
   }
 }
 
