@@ -93,6 +93,10 @@ header{
                     font-size: 12px;
                     letter-spacing: 2px;
                     font-weight: bold;
+                    cursor: pointer;;
+                    &:hover{
+                        opacity: 0.7;
+                    }
                 }
                 ul{
                     position: absolute;
@@ -152,6 +156,13 @@ header{
                     line-height: 1.3;
                     font-weight:bold;
                     margin: 0 0 2px 0;
+                    a{
+                        color: $maincolor;
+                        &:hover{
+                            text-decoration: none;
+                            opacity: 0.7;
+                        }
+                    }
                 }
                 span{
                     display: block;
@@ -172,6 +183,10 @@ header{
                 vertical-align: middle;
                 a{
                     color:$maincolor;
+                    &:hover{
+                        text-decoration: none;
+                        opacity: 0.7;
+                    }
                 }
             }
         }
@@ -274,6 +289,8 @@ footer{
             background: #f2f1ec;
             opacity:0.6;
             a{
+                display: block;
+                line-height: 45px;
                 color: #000;
             }
         }
@@ -1032,7 +1049,11 @@ footer{
     padding: 60px 0 0 0;
     #store_detail_head{
         height: 200px;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position:center center;
         display: table;
+        width: 100%;
         h2{
             display: table-cell;
             vertical-align: bottom;
@@ -1114,8 +1135,11 @@ footer{
         iframe{
             width: 100%;
             height: 250px;
-            margin: 0 0 20px 0;
+            margin: 0 0 10px 0;
         }
+    }
+    #store_detail_foot{
+        padding: 0 0 30px 0;
     }
 }
 
@@ -1222,6 +1246,11 @@ footer{
                 border-bottom: 0px;
                 line-height: 48px;
                 font-size: 1.4rem;
+                margin: 0 0 0 0;
+                overflow: hidden;
+                p{
+                    overflow: hidden;
+                }
                 strong{
                     font-weight: normal;
                     letter-spacing: 1px;
@@ -1234,6 +1263,7 @@ footer{
                 }
                 a{
                     color: $maincolor;
+                    font-size: 1.4rem;
                 }
             }
             .foot_sns_pc{
@@ -1332,6 +1362,7 @@ footer{
                 a{
                     color: #000;
                     font-size: 2.4rem;
+                    line-height: 80px;
                 }
             }
         }
@@ -1919,6 +1950,106 @@ footer{
         }    
     }
 
+    // ◆ 店舗詳細
+    #store_detail{
+        padding:80px 0 0 0;
+        #store_detail_head{
+            height:300px;
+            background-size:100% auto ;
+            display: table;
+            width: 1000px;
+            margin: 0 auto;
+            h2{
+                display: table-cell;
+                strong{
+                    font-size:2.6rem;
+                    line-height: 1.3;
+                    letter-spacing:2px;
+                    border-radius: 5px 5px 0 0;
+                    padding:20px 20px;
+                }
+            }
+        }
+        .store_detail_tag{
+            padding:20px 5% 20px;
+            width: 1000px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            ul{
+                display: block;
+                letter-spacing: $dib_reset01;
+                li{
+                    display: inline-block;
+                    letter-spacing: $dib_reset02;
+                    margin: 0 20px 8px 0;
+                    a{
+                        font-size: 1.6rem;
+                        letter-spacing: 2px;
+                        color: $maincolor;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        #store_detail_wrap{
+            display: table;
+            width: 1000px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+        #store_detail_body{
+            display: table-cell;
+            vertical-align: top;
+            box-sizing: border-box;
+            width: 60%;
+            padding:30px 5% 30px;
+            background: $bgcolor01;
+            dl{
+                display: block;
+                margin: 0 0 20px 0;
+                padding: 0 0 20px 0;
+                dt{
+                    font-size: 1.8rem;
+                    line-height:1.1;
+                    padding:5px 15px 6px;
+                    letter-spacing: 3px;
+                    margin: 0 0 10px 0;
+                }
+                dd{
+                    font-size: 1.8rem;
+                    line-height:1.5;
+                    padding: 0 0 0;
+                    letter-spacing: 2px;
+                    ul{
+                        list-style: none;
+                        li{
+                            margin: 0 0 3px 0;
+                        }
+                    }
+                }
+                &:nth-last-of-type(1){
+                    border: 0px;
+                    margin: 0 0 0 0;
+                }
+            }
+        }
+        #store_detail_map{
+            display: table-cell;
+            vertical-align: top;
+            box-sizing: border-box;
+            width: 40%;
+            padding:30px 5% 20px 0;
+            background: $bgcolor01;
+            iframe{
+                width: 100%;
+                height: 250px;
+                margin: 0 0 20px 0;
+            }
+        }
+        #store_detail_foot{
+            padding:30px 20% 30px;
+        }
+    }
 
 
 }
@@ -2019,7 +2150,14 @@ footer{
                 border-bottom: 0px;
                 line-height: 48px;
                 font-size: 1.4rem;
-                strong{
+                margin: 0 0 0 0;
+                overflow-x: auto;
+                overflow-y: hidden;
+                -webkit-overflow-scrolling: touch;
+                overflow-scrolling: touch;
+                overflow: auto;
+                white-space: nowrap;
+                    strong{
                     font-weight: normal;
                     letter-spacing: 1px;
                 }
@@ -2029,6 +2167,7 @@ footer{
                 }
                 a{
                     color: $maincolor;
+                    font-size: 1.4rem;
                 }
             }
             .foot_sns_pc{
@@ -2123,6 +2262,7 @@ footer{
                 a{
                     color: #000;
                     font-size: 2.4rem;
+                    line-height: 80px;
                 }
             }
         }
@@ -2641,6 +2781,106 @@ footer{
         }    
     }
 
+    // ◆ 店舗詳細
+    #store_detail{
+        padding:80px 0 0 0;
+        #store_detail_head{
+            height:300px;
+            background-size:100% auto ;
+            display: table;
+            width: 100%;
+            margin: 0 auto;
+            h2{
+                display: table-cell;
+                strong{
+                    font-size:2.6rem;
+                    line-height: 1.3;
+                    letter-spacing:2px;
+                    border-radius: 5px 5px 0 0;
+                    padding:20px 20px;
+                }
+            }
+        }
+        .store_detail_tag{
+            padding:20px 5% 20px;
+            width: 100%;
+            margin: 0 auto;
+            box-sizing: border-box;
+            ul{
+                display: block;
+                letter-spacing: $dib_reset01;
+                li{
+                    display: inline-block;
+                    letter-spacing: $dib_reset02;
+                    margin: 0 20px 8px 0;
+                    a{
+                        font-size: 1.6rem;
+                        letter-spacing: 2px;
+                        color: $maincolor;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        #store_detail_wrap{
+            display: table;
+            width: 100%;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+        #store_detail_body{
+            display: table-cell;
+            vertical-align: top;
+            box-sizing: border-box;
+            width: 60%;
+            padding:30px 5% 30px;
+            background: $bgcolor01;
+            dl{
+                display: block;
+                margin: 0 0 20px 0;
+                padding: 0 0 20px 0;
+                dt{
+                    font-size: 1.8rem;
+                    line-height:1.1;
+                    padding:5px 15px 6px;
+                    letter-spacing: 3px;
+                    margin: 0 0 10px 0;
+                }
+                dd{
+                    font-size: 1.8rem;
+                    line-height:1.5;
+                    padding: 0 0 0;
+                    letter-spacing: 2px;
+                    ul{
+                        list-style: none;
+                        li{
+                            margin: 0 0 3px 0;
+                        }
+                    }
+                }
+                &:nth-last-of-type(1){
+                    border: 0px;
+                    margin: 0 0 0 0;
+                }
+            }
+        }
+        #store_detail_map{
+            display: table-cell;
+            vertical-align: top;
+            box-sizing: border-box;
+            width: 40%;
+            padding:30px 5% 20px 0;
+            background: $bgcolor01;
+            iframe{
+                width: 100%;
+                height: 250px;
+                margin: 0 0 20px 0;
+            }
+        }
+        #store_detail_foot{
+            padding:30px 20% 30px;
+        }
+    }
 
 
 
