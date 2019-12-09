@@ -44,11 +44,6 @@
                 img_rect();
             });
 
-            //高さ調節
-            $(function() {
-                $('.entry_store_box').matchHeight();
-            });
-
             $(function() {
                 $(window).on("scroll", function() {
                     if ($(this).scrollTop() > 100) {
@@ -84,7 +79,7 @@
 
             $(window).scroll(function() {
                 //idがkeyvisualの要素を取得
-                let elem = document.getElementById('archive_head');
+                let elem = document.getElementById('news_detail_head');
                 //現在のスクロール位置を取得して、10で除算
                 let scrollY = window.scrollY/5;
                 //上で取得した値と画像幅を加算して、elemの背景サイズに設定
@@ -167,23 +162,49 @@
     </header>
     <main role="main">
         <article id="news_detail">
-            <section id="news_detail_head">
-                <h2>実は駅からちょっと遠い川崎西合同庁舎まで歩いてみた</h2>
-            </section>
-            <section class="news_navi">
-                <div class="navi_box clearfix">
-                    <div class="navi_box_back">
-                        <p class="btn_xs light"><a href="#">&laquo; 戻る</a></p>
-                    </div>
-                </div>
+            <section id="news_detail_head" style="background-image: url(../images/store/001.jpg);" >
+                <h2><span>実は駅からちょっと遠い川崎西合同庁舎まで歩いてみた実は駅からちょっと遠い川崎西合同庁舎まで歩いてみた</span></h2>
             </section>
             <section id="news_body">
                 <div class="wrap clearfix">
+                    <p class="entrydate rbtc">2019 / 12 / 01</p>
+                    <div class="entrybody">
+                        <p class="img01"><img src="https://tokyo2020.org/jp/assets/img/pages/games/torch/photo-01.jpg" alt=""></p>
+                        <p>12月4日のIOC理事会にて、陸上競技（マラソン）の競技会場が札幌大通公園に変更となることが承認され、札幌大通公園で開催される陸上競技（マラソン）チケットの販売は実施しないこととなりました。</p>
+                        <p>つきましては、該当のセッションのチケットをご購入いただいているお客様に、現在の状況をご案内させていただきます。</p>
+                        <p><strong>１．8月2日（日）6:00～12:00　陸上競技・女子マラソン（オリンピックスタジアム）のチケット／TOATH05</strong><br>※会場変更前の当該セッションのチケットは女子マラソンと陸上競技の両方を観戦いただけるチケットになります。</p>
+                        <p>女子マラソン以外の陸上競技のみの観戦をご希望されるお客様には、チケット価格を見直した上で観戦頂けるよう検討を進めております。</p>
+                        <ul>
+                            <li>女子マラソン以外の陸上競技のみの観戦をご希望されるお客様には、チケット価格を見直した上で観戦頂けるよう検討を進めております。</li>
+                            <li>上記の当該セッションの観戦をご希望されないお客様には、対象のチケットを全て払戻しさせていただきます。</li>
+                            <li>払戻しの時期や詳細な方法に関しては、今後決まり次第、対象のお客様にご案内させていただきます。</li>
+                        </ul>
 
-    
-    
-    
+                        <div class="moviebox moviemgn">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/RPBn15PAVi8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+
+                        <p><strong>２．8月9日（日）6:00～8:45　　男子マラソン（オリンピックスタジアム）のチケット／TOATM02</strong></p>
+                        <ul>
+                            <li>男子マラソンのチケットは、対象のチケットを全て払戻しさせていただきます。</li>
+                            <li>払戻しの時期や詳細な方法に関しては、今後決まり次第、対象のお客様にご案内させていただきます。</li>
+                        </ul>
+                        <p>ご不便をお掛け致しますが、詳細が決まり次第、対象のお客様にはご案内をさせて頂きますので、今しばらくお待ちいただきますよう、何卒宜しくお願い申し上げます。</p>
+
+                        <div class="img02">
+                            <p><img src="https://tokyo2020.org/assets/img/pages/games/torch/report/20191120-01-01.jpg" alt=""></p>
+                            <p><img src="https://tokyo2020.org/assets/img/pages/games/torch/report/20191120-01-02.jpg" alt=""></p>
+                            <p><img src="https://tokyo2020.org/assets/img/pages/games/torch/report/20191025-01-03.jpg" alt=""></p>
+                        </div>
+
+                        <p>12月4日のIOC理事会にて、陸上競技（マラソン）の競技会場が札幌大通公園に変更となることが承認され、札幌大通公園で開催される陸上競技（マラソン）チケットの販売は実施しないこととなりました。</p>
+                        <p>つきましては、該当のセッションのチケットをご購入いただいているお客様に、現在の状況をご案内させていただきます。</p>
+                        <p><strong>１．8月2日（日）6:00～12:00　陸上競技・女子マラソン（オリンピックスタジアム）のチケット／TOATH05</strong><br>※会場変更前の当該セッションのチケットは女子マラソンと陸上競技の両方を観戦いただけるチケットになります。</p>
+                    </div>
                 </div>
+            </section>
+            <section id="news_foot">
+                <p class="btn_back"><a href="#">ニュース一覧に戻る</a></p>
             </section>
             <section class="cat_search_box contentsfoot">
                 <div class="wrap clearfix">
