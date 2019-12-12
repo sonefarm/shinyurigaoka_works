@@ -1111,6 +1111,10 @@ footer address {
   padding: 0 0 20px 0;
 }
 
+#cat_archive #archive_foot {
+  padding: 0 20% 30px;
+}
+
 #store_detail {
   padding: 60px 0 0 0;
 }
@@ -1579,6 +1583,46 @@ footer address {
     position: relative;
     font-size: 1.8rem;
     letter-spacing: 2px;
+  }
+  .btn_back {
+    display: block;
+    text-align: center;
+  }
+  .btn_back a {
+    display: inline-block;
+    text-align: center;
+    min-width: 80%;
+    max-width: 100%;
+    background: #FFF;
+    border: 1px solid #1f79a9;
+    color: #1f79a9;
+    padding: 15px 10px 17px;
+    border-radius: 5px;
+    text-decoration: none;
+    position: relative;
+    font-size: 1.8rem;
+  }
+  .btn_back a::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border: 0px;
+    border-top: solid 2px #1f79a9;
+    border-right: solid 2px #1f79a9;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(225deg);
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    margin-top: -4px;
+  }
+  .btn_back a:hover {
+    background: #1f79a9;
+    color: #FFF;
+  }
+  .btn_back a:hover::before {
+    border-top: solid 2px #FFF;
+    border-right: solid 2px #FFF;
   }
   .modaal-content-container {
     letter-spacing: 2px;

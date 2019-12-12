@@ -1056,6 +1056,9 @@ footer{
     #archive_body{
         padding: 0 0 20px 0;
     }
+    #archive_foot{
+        padding: 0 20% 30px;
+    }
 }
 
 // ◆ 店舗詳細
@@ -1524,6 +1527,48 @@ footer{
             letter-spacing: 2px;
         }
     }
+    .btn_back{
+        display: block;
+        text-align: center;
+        a{
+            display: inline-block;
+            text-align: center;
+            min-width: 80%;
+            max-width: 100%;
+            background: #FFF;
+            border: 1px solid $maincolor;
+            color: $maincolor;
+            padding:15px 10px 17px;
+            border-radius:5px;
+            text-decoration: none;
+            position: relative;
+            font-size: 1.8rem;
+            &::before {
+                content: '';
+                width: 6px;
+                height: 6px;
+                border: 0px;
+                border-top: solid 2px $maincolor;
+                border-right: solid 2px $maincolor;
+                -ms-transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+                transform: rotate(225deg);
+                position: absolute;
+                top: 50%;
+                left: 5%;
+                margin-top: -4px;
+            }
+            &:hover {
+                background: $maincolor;
+                color: #FFF;
+                &::before {
+                    border-top: solid 2px #FFF;
+                    border-right: solid 2px #FFF;
+                }
+            }
+        }
+    }
+
     // --メニュー用
     .modaal-content-container{
         letter-spacing: 2px;
