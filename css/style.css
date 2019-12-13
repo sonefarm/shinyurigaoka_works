@@ -208,6 +208,7 @@ main .wrap {
 footer {
   background: #f2f1ec;
   padding: 0 0 20px 0;
+  border-top: 1px solid #CCC;
 }
 
 footer .foot_sns_pc {
@@ -222,7 +223,6 @@ footer #foot_meta_area .foot_pagettl {
   height: 43px;
   padding: 0 0 0 3%;
   margin: 0 45px 0 0;
-  border-top: 1px solid #CCC;
   border-bottom: 1px solid #CCC;
   line-height: 43px;
   font-size: 1.2rem;
@@ -1440,7 +1440,6 @@ footer address {
   footer #foot_meta_area .foot_pagettl {
     height: 48px;
     padding: 0 0 0 0;
-    border-top: 1px solid #CCC;
     border-bottom: 0px;
     line-height: 48px;
     font-size: 1.4rem;
