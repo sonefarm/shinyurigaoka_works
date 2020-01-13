@@ -109,7 +109,10 @@ html {
 body {
     font-size: 1.6em;
 }
-body.jp {
+body.lang_jp {
+    font-family: 'Noto Sans JP', "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic Pro",  "Meiryo", verdana, "Osaka", "MS PGothic", Sans-Serif;
+}
+body.lang_en {
     font-family: 'Noto Sans JP', "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic Pro",  "Meiryo", verdana, "Osaka", "MS PGothic", Sans-Serif;
 }
 .rmp1c { font-family: 'Noto Sans JP', sans-serif; }

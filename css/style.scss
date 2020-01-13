@@ -230,6 +230,22 @@ header{
         }
     }
 }
+.lang_en{
+    header{
+        div{
+            &#header_inner{
+                height: 60px;
+            }
+        }
+        &.scrolls{
+            div{
+                &#header_inner{
+                    height: 50px;
+                }
+            }
+        }
+    }
+}
 
 // ◆ メインエリア用
 main {
@@ -260,7 +276,6 @@ footer{
             overflow-x: auto;
             overflow-y: hidden;
             -webkit-overflow-scrolling: touch;
-            overflow-scrolling: touch;
             overflow: auto;
             white-space: nowrap;
             strong{
@@ -397,41 +412,41 @@ footer{
 }
 // --ページ送り
 .pagination{
+    clear: both;
     margin: 0 0 20px 0;
-    ul{
+    .nav-links{
         display: block;
         text-align: center;
         margin: 0;
         padding: 0;
         letter-spacing: $dib_reset01;
-        li{
+        a{
             margin: 0 2px 3px;
-            padding: 0;
+            padding: 0 10px 0;
             display: inline-block;
             letter-spacing: $dib_reset02;
             vertical-align: middle;
-            a{
-                display: block;
-                width: 30px;
-                height: 30px;
-                line-height: 30px;
-                text-align: center;
-                background: $maincolor;
-                color: #FFF;
-                font-size: 1.2rem;
-            }
-            span{
-                display: block;
-                width: 30px;
-                height: 30px;
-                line-height: 30px;
-                text-align: center;
-                color: #000;
-                font-size: 1.2rem;
-                border: 1px solid $maincolor;
-                box-sizing: border-box;
-            }
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background: $maincolor;
+            color: #FFF;
+            font-size: 1.2rem;
         }
+        span{
+            margin: 0 2px 3px;
+            padding: 0 10px 0;
+            display: inline-block;
+            letter-spacing: $dib_reset02;
+            vertical-align: middle;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background: #FFF;
+            color: #000;
+            border: 1px solid $maincolor;
+            font-size: 1.2rem;
+    }
     }
 }
 // --ボタン
@@ -684,6 +699,7 @@ footer{
                 border-right: 1px solid #eee;
             }
             &:nth-of-type(8){
+                border-right: 0;
             }
         }
     }
@@ -722,14 +738,18 @@ footer{
             p {
                 height: 150px;
                 overflow: hidden;
+                position: relative;
                 img{
                     width: 100%;
                     height: auto;
                     transform: scale(1.1);
                     transition: .9s;
+                    position: absolute;
+                    left: 50%;
+                    margin-left: -50%;
                 }
             }
-            &:hover{
+        &:hover{
                 p {
                     img{
                         transform: scale(1);
@@ -986,6 +1006,79 @@ footer{
                     font-size: 1.4rem;
                     line-height: 1.8;
                     margin: 0 0 15px 0;
+                }
+            }
+        }
+    }
+    &.lang_en{
+        .area_search_box{
+            ul{
+                display: block;
+                letter-spacing:0;
+                li{
+                    display:block;
+                    letter-spacing:0;
+                    width: 100%;
+                    height: auto;
+                    &.area01{
+                        background: url(../images/index/bg_area01.jpg) no-repeat center center;
+                        background-size:100% auto;
+                    }
+                    &.area02{
+                        background: url(../images/index/bg_area03.jpg) no-repeat center center;
+                        background-size:auto 100%;
+                    }
+                    &.area03{
+                        background: url(../images/index/bg_area02.jpg) no-repeat center center;
+                        background-size:100% auto;
+                    }
+                    div{
+                        display: table;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0,0,0,0.4);
+                        dl{
+                            display: table-cell;
+                            vertical-align:top;
+                            text-align: center;
+                            padding: 0 0 8px 0;
+                            dt{
+                                display: block;
+                                font-size: 1.4rem;
+                                padding: 10px 0 10px 0;
+                                margin: 0 0 10px 0;
+                                letter-spacing: 1px;
+                                background: $maincolor;
+                                font-weight: bold;
+                                color: #FFF;
+                            }
+                            dd{
+                                display: block;
+                                font-size: 1.2rem;
+                                line-height: 1.3;
+                                padding: 0 5px 0;
+                                margin: 0 0 8px 0;
+                                letter-spacing: 1px;
+                                color: #FFF;
+                                text-align: left;
+                            }
+                            a{
+                                color: #fff;
+                                text-decoration: none;
+                                &:hover{
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                    &:nth-of-type(1){
+                        border-right: 0px;
+                    }
+                    &:nth-of-type(2){
+                        border-right: 0px ;
+                        width: 100%;
+                        display: none;
+                    }
                 }
             }
         }
@@ -1268,6 +1361,150 @@ footer{
     }
 }
 
+// ◆ 固定ページ
+#page_detail{
+    padding: 60px 0 0 0;
+    #page_head{
+        text-align: center;
+        padding: 12px 4% 12px;
+        box-sizing: border-box;
+        border-bottom:1px solid $maincolor;
+        background: $bgcolor01;
+        .page_head_inner{
+            display: table;
+            margin: 0 auto;
+            height: 100%;
+            p{
+                display: table-cell;
+                font-size: 2.0rem;
+                color: $subcolor;
+                padding: 0 10px 0 0;
+            }
+            h2{
+                display: table-cell;
+                letter-spacing: 2px;
+                font-size: 1.6rem;
+                color: $subcolor;
+            }
+        }
+    }
+    #page_body{
+        padding:10px 2.5% 10px;
+        &.bg02{
+            background: $bgcolor01;
+        }
+        h3{
+            margin: 0 0 10px 0;
+        }
+        p{
+            margin: 0 0 20px 0;
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+            line-height: 1.6;
+            &.bline{
+                padding: 0 0 10px 0;
+                border-bottom: 1px solid #ccc;
+            }
+            &.send{
+                padding: 0 0 0px 0;
+                margin: 0 0 0 0;
+                border-bottom: 0px;
+            }
+        }
+        .contact_body{
+            dl{
+                display: block;
+                width: 100%;
+                dt{
+                    display:block;
+                    font-size: 1.4rem;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    margin: 0 0 8px 0;
+                    span{
+                        color: #FF0000;
+                        font-size: 1.2rem;
+                        font-weight: normal;
+                    }
+                }
+                dd{
+                    display:block;
+                    padding: 0 0 15px 0;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    #page_foot{
+        padding: 0 20% 30px;
+    }
+}
+
+// ◆ フォーム
+input[type="submit"],
+input[type="button"] {
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  appearance: button;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+input[type="submit"]::-webkit-search-decoration,
+input[type="button"]::-webkit-search-decoration {
+  display: none;
+}
+input[type="submit"]::focus,
+input[type="button"]::focus {
+  outline-offset: -2px;
+}
+
+input{
+    &[type="text"]{
+        width:99%;
+        border:1px solid #CCC;
+        padding:8px 5px;
+        margin: 0 0 0 ;
+        box-sizing: border-box;
+        font-size: 1.6rem;
+    }
+    &[type="tel"]{
+        width:99%;
+        border:1px solid #CCC;
+        padding:8px 5px;
+        margin: 0 0 0 ;
+        box-sizing: border-box;
+        font-size: 1.6rem;
+    }
+    &[type="email"]{
+        width:99%;
+        border:1px solid #CCC;
+        padding:8px 5px;
+        margin: 0 0 0 ;
+        box-sizing: border-box;
+        font-size: 1.6rem;
+    }
+    &[type="submit"]{
+        width:99%;
+        border:1px solid #CCC;
+        background: #333;
+        color: #fff;
+        padding:10px 5px;
+        margin: 0 0 0 ;
+        border-radius: 5px;
+        font-size: 1.6rem;
+    }
+}
+textarea{
+    border:1px solid #CCC;
+    width:99%;
+    height: 210px;
+    padding:5px 5px;
+    margin: 0 0 0 ;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+}
 
 
 @include xxl-screen($screen-lg02) {
@@ -1344,7 +1581,15 @@ footer{
             }
         }
     }
-
+    .lang_en{
+        header{
+            div{
+                &#header_inner{
+                    height: 80px;
+                }
+            }
+        }
+    }
     // ◆ メインエリア用
     main {
         padding: 0 0 0 0;
@@ -1675,6 +1920,44 @@ footer{
             }
         }
     }
+    .lang_en{
+        .modaal-content-container{
+            h2{ 
+                font-size: 3.0rem;
+            }
+            h3{ 
+                font-size: 2.4rem;
+                span{
+                    font-size: 2.0rem;
+                }
+            }
+            h4{
+                font-size: 2.0rem;
+            }
+                ul{
+                display: block;
+                &.lang{
+                    li{
+                        a{
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+                &.catlist{
+                    li{
+                        a{
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+            }
+            p{
+                &.txt01{
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
     // --カテゴリから探す
     .cat_search_box{
         background: $maincolor;
@@ -1764,6 +2047,18 @@ footer{
             }
         }
     }
+    .lang_en{
+        .cat_search_box{
+            .sec_head_ttl{
+                h2{
+                    padding: 0 5px 0;
+                    font-size: 1.0rem;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+
     // --店舗 一覧用
     .entry_store_box{
         position: relative;
@@ -1801,16 +2096,20 @@ footer{
             &.entry_store_img{
                 display: block;
                 width: 100%;
-                height: 150px;
+                height: 210px;
                 overflow: hidden;
                 p {
-                    height: 150px;
+                    height: 210px;
                     overflow: hidden;
+                    position: relative;
                     img{
                         width: 100%;
                         height: auto;
                         transform: scale(1.1);
                         transition: .9s;
+                        position: absolute;
+                        left: 50%;
+                        margin-left: -50%;
                     }
                 }
                 &:hover{
@@ -1909,29 +2208,30 @@ footer{
     }
     // --ページ送り
     .pagination{
-        padding:30px 0 0 0;
-        margin: 0 0 30px 0;
-        ul{
-            li{
-                margin: 0 4px 3px;
-                a{
-                    width: 45px;
-                    height: 45px;
-                    line-height: 45px;
-                    background: $maincolor;
-                    font-size: 1.6rem;
-                }
-                span{
-                    width: 45px;
-                    height: 45px;
-                    line-height: 45px;
-                    color: #000;
-                    font-size: 1.6rem;
-                }
+        clear: both;
+        margin: 0 0 20px 0;
+        padding:20px 0 0 0;
+        .nav-links{
+            a{
+                margin: 0 3px 4px;
+                padding: 0 20px 0;
+                height: 40px;
+                line-height: 40px;
+                font-size: 1.6rem;
+            }
+            span{
+                margin: 0 3px 4px;
+                padding: 0 20px 0;
+                height: 40px;
+                line-height: 40px;
+                background: #FFF;
+                color: #000;
+                border: 1px solid $maincolor;
+                font-size: 1.6rem;
             }
         }
     }
-
+    
     // ◆ トップ用
     #index{
         //メインイメージ
@@ -1994,6 +2294,7 @@ footer{
                 }
             }
         }
+
         //店舗一覧
         .entry_access_box{
             background: #f2f1ec;
@@ -2065,7 +2366,79 @@ footer{
             }
         }
 
-
+        &.lang_en{
+            .area_search_box{
+                ul{
+                    display: block;
+                    letter-spacing:$dib_reset01;
+                    li{
+                        display:inline-block;
+                        letter-spacing:$dib_reset02;
+                        width: 33%;
+                        height: 100%;
+                        &.area01{
+                            background: url(../images/index/bg_area01.jpg) no-repeat center center;
+                            background-size:100% auto;
+                        }
+                        &.area02{
+                            background: url(../images/index/bg_area03.jpg) no-repeat center center;
+                            background-size:100% auto;
+                        }
+                        &.area03{
+                            background: url(../images/index/bg_area02.jpg) no-repeat center center;
+                            background-size:100% auto;
+                        }
+                        div{
+                            display: table;
+                            width: 100%;
+                            height: 100%;
+                            background-color: rgba(0,0,0,0.4);
+                            dl{
+                                display: table-cell;
+                                vertical-align:top;
+                                text-align: center;
+                                padding: 0 0 8px 0;
+                                dt{
+                                    display: block;
+                                    font-size: 1.6rem;
+                                    padding: 10px 0 10px 0;
+                                    margin: 0 0 10px 0;
+                                    letter-spacing: 1px;
+                                    background: $maincolor;
+                                    font-weight: bold;
+                                    color: #FFF;
+                                }
+                                dd{
+                                    display: block;
+                                    font-size: 1.6rem;
+                                    line-height: 1.3;
+                                    padding: 0 15px 0;
+                                    margin: 0 0 8px 0;
+                                    letter-spacing: 1px;
+                                    color: #FFF;
+                                    text-align: left;
+                                }
+                                a{
+                                    color: #fff;
+                                    text-decoration: none;
+                                    &:hover{
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+                        }
+                        &:nth-of-type(1){
+                            border-right: 1px solid #FFF;
+                        }
+                        &:nth-of-type(2){
+                            border-right: 1px solid #FFF;
+                            width: 34%;
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     // ◆ アーカイブ用
@@ -2384,6 +2757,127 @@ footer{
         }
     }
 
+    // ◆ 固定ページ
+    #page_detail{
+        padding: 80px 0 0 0;
+        #page_head{
+            text-align: center;
+            padding:20px 4% 20px;
+            border-bottom:1px solid $maincolor;
+            background: $bgcolor01;
+            .page_head_inner{
+                height: 100%;
+                p{
+                    font-size:3.0rem;
+                    color: $subcolor;
+                    padding: 0 10px 0 0;
+                }
+                h2{
+                    letter-spacing: 2px;
+                    font-size: 2.6rem;
+                    color: $subcolor;
+                }
+            }
+        }
+        #page_body{
+            padding:30px 2.5% 10px;
+            &.bg02{
+                background: $bgcolor01;
+            }
+            h3{
+                font-size: 1.8rem;
+                letter-spacing: 1px;
+                margin: 0 0 10px 0;
+            }
+            p{
+                margin: 0 0 20px 0;
+                font-size: 1.6rem;
+                letter-spacing: 1px;
+                line-height: 1.8;
+                &.bline{
+                    padding: 0 0 15px 0;
+                    border-bottom: 1px solid #ccc;
+                }
+            }
+            .contact_body{
+                dl{
+                    display: block;
+                    width: 100%;
+                    dt{
+                        display:block;
+                        font-size: 1.6rem;
+                        font-weight: bold;
+                        letter-spacing: 1px;
+                        margin: 0 0 15px 0;
+                        span{
+                            color: #FF0000;
+                            font-size: 1.4rem;
+                            font-weight: normal;
+                        }
+                    }
+                    dd{
+                        display:block;
+                        padding: 0 0 15px 0;
+                        text-align: center;
+                    }
+                }
+            }
+            .send{
+                display: block;
+                text-align: center;
+            }
+        }
+        #page_foot{
+            padding:20px 20% 30px;
+        }
+    }
+
+    // ◆ フォーム
+    input{
+        &[type="text"]{
+            width:99%;
+            border:1px solid #CCC;
+            padding:8px 5px;
+            margin: 0 0 0 ;
+            box-sizing: border-box;
+            font-size: 1.6rem;
+        }
+        &[type="tel"]{
+            width:99%;
+            border:1px solid #CCC;
+            padding:8px 5px;
+            margin: 0 0 0 ;
+            box-sizing: border-box;
+            font-size: 1.6rem;
+        }
+        &[type="email"]{
+            width:99%;
+            border:1px solid #CCC;
+            padding:8px 5px;
+            margin: 0 0 0 ;
+            box-sizing: border-box;
+            font-size: 1.6rem;
+        }
+        &[type="submit"]{
+            width:80%;
+            border:1px solid #CCC;
+            background: #333;
+            color: #fff;
+            padding:10px 5px;
+            margin: 0 0 0 ;
+            border-radius: 5px;
+            font-size: 1.6rem;
+        }
+    }
+    textarea{
+        border:1px solid #CCC;
+        width:99%;
+        height: 210px;
+        padding:5px 5px;
+        margin: 0 0 0 ;
+        box-sizing: border-box;
+        font-size: 1.6rem;
+    }
 
 
 }
@@ -2461,6 +2955,23 @@ footer{
             }
         }
     }
+    .lang_en{
+        header{
+            div{
+                &#header_inner{
+                    height: 80px;
+                }
+            }
+            &.scrolls{
+                div{
+                    &#header_inner{
+                        height:60px;
+                    }
+                }
+            }
+        }
+    }
+
     // ◆ メイン用
     main {
         padding: 0 0 0 0;
@@ -2488,7 +2999,6 @@ footer{
                 overflow-x: auto;
                 overflow-y: hidden;
                 -webkit-overflow-scrolling: touch;
-                overflow-scrolling: touch;
                 overflow: auto;
                 white-space: nowrap;
                 strong{
@@ -3216,6 +3726,128 @@ footer{
         }
     }
 
+    // ◆ 固定ページ
+    #page_detail{
+        padding: 80px 0 0 0;
+        #page_head{
+            text-align: center;
+            padding: 12px 4% 12px;
+            box-sizing: border-box;
+            border-bottom:1px solid $maincolor;
+            background: $bgcolor01;
+            .page_head_inner{
+                display: table;
+                margin: 0 auto;
+                height: 100%;
+                p{
+                    display: table-cell;
+                    font-size: 2.0rem;
+                    color: $subcolor;
+                    padding: 0 10px 0 0;
+                }
+                h2{
+                    display: table-cell;
+                    letter-spacing: 2px;
+                    font-size: 1.6rem;
+                    color: $subcolor;
+                }
+            }
+        }
+        #page_body{
+            padding:10px 2.5% 10px;
+            &.bg02{
+                background: $bgcolor01;
+            }
+            h3{
+                margin: 0 0 10px 0;
+            }
+            p{
+                margin: 0 0 20px 0;
+                font-size: 1.4rem;
+                letter-spacing: 1px;
+                line-height: 1.6;
+                &.bline{
+                    padding: 0 0 15px 0;
+                    border-bottom: 1px solid #ccc;
+                }
+                &.send{
+                    display: block;
+                    text-align: center;
+                    padding: 0 20% 30px;
+                }
+            }
+            .contact_body{
+                dl{
+                    display: block;
+                    width: 100%;
+                    dt{
+                        display:block;
+                        font-size: 1.4rem;
+                        font-weight: bold;
+                        letter-spacing: 1px;
+                        margin: 0 0 8px 0;
+                        span{
+                            color: #FF0000;
+                            font-size: 1.2rem;
+                            font-weight: normal;
+                        }
+                    }
+                    dd{
+                        display:block;
+                        padding: 0 0 15px 0;
+                        text-align: center;
+                    }
+                }
+            }
+    }
+    }
+
+    // ◆ フォーム
+    input{
+        &[type="text"]{
+            width:99%;
+            border:1px solid #CCC;
+            padding:8px 5px;
+            margin: 0 0 0 ;
+            box-sizing: border-box;
+            font-size: 1.6rem;
+        }
+        &[type="tel"]{
+            width:99%;
+            border:1px solid #CCC;
+            padding:8px 5px;
+            margin: 0 0 0 ;
+            box-sizing: border-box;
+            font-size: 1.6rem;
+        }
+        &[type="email"]{
+            width:99%;
+            border:1px solid #CCC;
+            padding:8px 5px;
+            margin: 0 0 0 ;
+            box-sizing: border-box;
+            font-size: 1.6rem;
+        }
+        &[type="submit"]{
+            width:70%;
+            border:1px solid #CCC;
+            background: #333;
+            color: #fff;
+            padding:10px 5px;
+            margin: 0 0 0 ;
+            border-radius: 5px;
+            font-size: 1.6rem;
+        }
+    }
+    textarea{
+        border:1px solid #CCC;
+        width:99%;
+        height: 210px;
+        padding:5px 5px;
+        margin: 0 0 0 ;
+        box-sizing: border-box;
+        font-size: 1.6rem;
+    }
 
 
 }
